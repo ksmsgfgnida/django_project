@@ -1,0 +1,59 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+}
+
+h1{
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Адаптивный размер шрифта */
+    color: #FFAF90; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+a {
+    color: inherit; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+a:hover {
+color: #FFAF90;
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.card-title{
+text-decoration: none;}
+
+
+h3  {
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+p {
+    font-size: clamp(0.7rem, 1vw, 1rem); /* Адаптивный размер шрифта */
+}
+
+.pagination .page-item .page-link {
+    background-color: #FFE0D3; /* Цвет фона для всех страниц */
+    border: none; /* Убираем рамку */
+    color: #000; /* Цвет текста */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #FFCAB6; /* Цвет фона для активной страницы */
+    border: none; /* Убираем рамку */
+    color: #000; /* Цвет текста */
+}
+
+.pagination .page-item .page-link:hover,
+.pagination .page-item .page-link:focus {
+    background-color: #FFCAB6; /* Цвет фона при наведении */
+    border: none; /* Убираем рамку */
+    color: #000; /* Цвет текста */
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #FFE0D3; /* Цвет фона для неактивной страницы */
+    color: #6c757d; /* Цвет текста для неактивной страницы */
+    pointer-events: none; /* Отключаем кликабельность */
+}
+

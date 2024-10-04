@@ -1,0 +1,62 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+}
+
+h1  {
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Адаптивный размер шрифта */
+}
+
+
+h3  {
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+h4  {
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+p {
+    text-align: center;
+    font-size: clamp(0.7rem, 2vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+    .btn, .btn-order {
+        background-color: #FFE0D3;
+        color: #000;
+        border: none;
+    }
+
+    .btn:hover, .btn:focus, .btn-order:hover, .btn-order:focus {
+        background-color: #FFCAB6;
+        color: #000;
+    }
+
+    .btn-dark {
+        background-color: #888888;
+        border: none;
+    }
+
+    .btn-dark:hover, .btn-dark:focus {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .card-header {
+        background-color: #FFE8DF;
+    }
+
+    .remove-from-cart img {
+        filter: brightness(0); /* Черный цвет */
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .float-left {
+        float: left;
+    }
+

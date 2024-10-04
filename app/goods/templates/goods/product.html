@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/footer_css.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/catalog_css.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% endblock %}
+
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card mb-4 custom-shadow">
+        <div class="row">
+            <!-- Миниатюры -->
+            <div class="col-md-4 pt-5"><br><br>
+                <img src="{{ product.image.url }}" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal1">
+            </div>
+            <div class="col-md-8 pt-2">
+                <h5 class="card-title">{{ product.name }}</h5>
+                 <h6 class="card-text"> Цена: {{ product.sell_price }} ₽</h6>
+                <p class="card-text">{{ product.description }}</p>
+
+
+            </div>
+            <!-- Увеличить изображение в модальном окне -->
+            <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="imageModal1Label">{{ product.name }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ product.image.url }}" class="img-fluid" alt="Изображение 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Описание товара -->
+        <div class="card-body text-center">
+            {% if product.quantity > 0 %}
+                <a href="{% url "cart:cart_add" %}" class="btn btn-dark add-to-cart me-2"
+                data-product-id="{{ product.id }}">
+                {% csrf_token %}
+                Добавить в корзину</a>
+            {% else %}
+                <p class="text-danger">Товара нет в наличии</p>
+                <button class="btn btn-dark me-2" disabled>Добавить в корзину</button>
+            {% endif %}
+            <a href=" " class="btn btn-dark">
+            Вернуться назад</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

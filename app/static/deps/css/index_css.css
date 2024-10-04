@@ -1,0 +1,142 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+}
+
+h1  {
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Адаптивный размер шрифта */
+}
+
+
+h3  {
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+p {
+    text-align: center;
+    font-size: clamp(0.7rem, 2vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+.container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-4-1, .col-md-12-1 {
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.col-lg-4-1 {
+    flex: 0 0 33.3333%;
+    max-width: 25%;
+}
+
+.col-md-12-1 {
+    flex: 0 0 100%;
+    max-width: 25%;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.shag {
+    width: 100%;
+}
+
+.best {
+    width: 50%;
+}
+
+
+.btn-bt {
+    z-index: 1;
+    width: 130%;
+    background-color: #FFE0D3;
+    border: none;
+    padding: 5% 10%;
+    cursor: pointer;
+    border-radius: 15vw;
+    transition: all 0.3s ease; /* Плавные изменения при адаптации */
+}
+
+.btn-bt:hover {
+    background-color: #FFCAB6;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-30 {
+    top: 83%;
+}
+
+.start-30 {
+    left: 48%;
+}
+
+.translate-middle {
+    transform: translate(-20%, -20%);
+}
+
+
+/* Адаптивные стили */
+@media (max-width: 992px) {
+    .row-1 .col-lg-3-1, .row-1 .col-md-12-1 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+@media (max-width: 768px) {
+    .row-1 .col-lg-3-1, .row-1 .col-md-12-1 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .btn-bt {
+        width: 100%;
+        padding: 3% 5%;
+    }
+
+    .top-30 {
+        top: 90%;
+    }
+
+    .start-30 {
+        left: 50%;
+    }
+
+    .translate-middle {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .row-1 .col-lg-3-1, .row-1 .col-md-12-1 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .btn-bt {
+        width: 40%;
+        padding: 3% 5%;
+    }
+}
+
+
+

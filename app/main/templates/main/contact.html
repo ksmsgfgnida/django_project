@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/footer_css.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/contact_css.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{% endblock %}
+
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock  %}
+
+{% block content %}
+    <div class="mt- pt-3 text-lg-start">
+        <h1  class="m-2">Контакты</h1>
+
+            <div class="container pt-3">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-lg-start">
+
+<h3>
+
+    Наш магазин: </h3><p><i class="fas fa-home"></i><a href="https://www.google.com/maps/search/?api=1&query=Россия,+г.Владимир,+ул.Мира+д.30" target="_blank">Россия, г.Владимир, ул.Мира д.30</a>
+     </p><p>ПН-ПТ 8:00-20:00
+</p>
+
+
+    <h3>Связаться с нами</h3>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:blmf.off@gmail.com">blmf.off@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79672557994">+7(967)255-79-94</a></p></div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 pt-4 text-lg-start">
+            <h3>По вопросам сотрудничества</h3>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:blmf.cor@gmail.com">blmf.cor@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79672628990">+7(967)262-89-90</a></p>
+            <h3>Заявки на работу можно оставить</h3>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:blomf.job@gmail.com">blomf.job@gmail.com</a></p>
+
+        </div>
+
+
+</div>
+        </div>
+    </div><br>
+<h2 >Приходите в гости!</h2><br>
+{% endblock %}
+{% block footer %}
+<footer>
+    <!-- Grid container -->
+    <div class="container pt-3">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 text-start">
+                <h5 class="text-uppercase text-white">Bloomify</h5>
+                <h6 class="text-white">С любовью к себе и природе</h6><br>
+                <h7 class="text-white"><i class="fas fa-envelope"></i> <a href="mailto:blmf.off@gmail.com">blmf.off@gmail.com</a></h7><br>
+                <h7 class="text-white"><i class="fas fa-phone"></i> <a href="tel:+79672557994">+7(967)255-79-94</a></h7><br><br>
+                <h7 class="text-white"><i class="fas fa-home"></i><a href="https://www.google.com/maps/search/?api=1&query=Россия,+г.Владимир,+ул.Мира+д.30" target="_blank">Россия, г.Владимир, ул.Мира д.30</a></h7><br><br>
+
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-5 col-md-6 mb-4 mb-md-0 text-center">
+                <h6 class="pt-2 text-white text-center" >Чтобы получать новости быстрее всех, <br> оформи подписку</h6><br>
+                <!-- Email input -->
+                <div class="email-subscribe d-flex align-items-center justify-content-center">
+                    <div data-mdb-input-init class="form-outline mb-0">
+                        <input type="email" id="form5Example22" name="email" class="form-control" required />
+                        <label class="form-label"  for="form5Example22">Электронная почта</label>
+                    </div>
+                    <button data-mdb-ripple-init type="submit" class="btn btn-primary-dark mb-4">Подписаться</button>
+                </div>
+                <!-- Social icons -->
+                <section class="mb-4">
+                    <!-- Telegram -->
+                    <a data-mdb-ripple-init class="btn-1 btn-outline btn-floating m-1" style="background-color: #888888" href="https://t.me/" role="button">
+                        <i class="fab fa-telegram text-white"></i>
+                    </a>
+                    <!-- VKontakte -->
+                    <a data-mdb-ripple-init class="btn-1 btn-outline btn-floating m-1" style="background-color: #888888" href="https://vk.com/" role="button">
+                        <i class="fab fa-vk text-white"></i>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a data-mdb-ripple-init class="btn-1 btn-outline btn-floating m-1" style="background-color: #888888" href="https://web.whatsapp.com/" role="button">
+                        <i class="fab fa-whatsapp text-white"></i>
+                    </a>
+                </section>
+            </div>
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- Grid container -->
+</footer>
+{% endblock %}

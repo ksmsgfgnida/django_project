@@ -1,0 +1,65 @@
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/index_css.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}
+<div class="card mb-3 text-bg-light shadow-lg">
+    {% for cart in carts %}
+        <div class="card-header" style="background-color: #FFE8DF;">
+            <h5 class="card-title">{{ cart.product.name }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="row text-center">
+                    <div class="col p-0">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-dark btn-sm decrement"
+                                    data-cart-id="{{ cart.id }}"
+                                    data-cart-change-url="{% url "cart:cart_change" %}">
+                                    {% csrf_token %}
+                                    -</button>
+                            </span>
+                            <input type="text" class="form-control number" value="{{ cart.quantity }}"
+                                readonly>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-dark btn-sm increment"
+                                    data-cart-id="{{ cart.id }}"
+                                    data-cart-change-url="{% url "cart:cart_change" %}">
+                                    {% csrf_token %}
+                                    +</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col p-0">
+                        <p>x {{ cart.product.sell_price }} ₽  </p>
+                    </div>
+                    <div class="col p-0"><p> = {{ cart.products_price }} ₽<p></p></div>
+                    <div class="col p-0">
+                        <a href="{% url "cart:cart_remove" %}" class="remove-from-cart"
+                        data-cart-id="{{ cart.id }}">
+                            {% csrf_token %}
+                            <img class="mx-1" src="{% static "deps/icons/trash3-fill.svg" %}"
+                                alt="Catalog Icon" width="16" height="16" style="color: #000;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    {% endfor %}
+</div>
+<div class="card mb-3">
+    <div class="card-footer text-center">
+        <p >Итого {{ carts.total_quantity }} товар(а) на сумму</p>
+        <h4 >{{ carts.total_price }} ₽</h4>
+    </div>
+</div>
+{% if carts and not order %}
+<div class="text-center">
+    <a class="btn btn-dark btn-order" href="{% url "orders:create_order" %}">
+        Оформить заказ
+    </a>
+</div>
+{% endif %}

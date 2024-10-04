@@ -1,0 +1,71 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+}
+
+h1  {
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Адаптивный размер шрифта */
+}
+
+h2  {
+    font-size: clamp(0.9rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+
+h3  {
+    font-size: clamp(0.8rem, 1.1vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+p {
+    font-size: clamp(0.7rem, 1vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+.banner {
+}
+
+.ban {
+  width:90%;
+}
+/* Общие стили */
+.container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-4-1, .col-md-12-1 {
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.col-lg-4-1 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.col-md-12-1 {
+    flex: 0 0 100%;
+    max-width: 33.3333%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+p {
+    margin-top: 10px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 992px) {
+    .col-lg-4-1, .col-md-12-1 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+

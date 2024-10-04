@@ -1,0 +1,99 @@
+
+footer h5  {
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+
+
+footer h7  {
+    font-size: clamp(0.7rem, 1vw, 1.2rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+footer h6 {
+    font-size: clamp(0.9rem, 2vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+footer {
+font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+    width: 100%;
+    background-color: #888888;
+    color: #fff;
+  }
+
+
+footer .text-white {
+    color: #fff !important;
+}
+
+footer .row {
+    justify-content:space-between;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .btn {
+    background-color: #5B5B5B;
+    color: #fff;
+    border: none;
+}
+
+footer .btn-1{
+font-size:200%;
+    background-color: #5B5B5B;
+    color: #fff;
+    border: none;
+}
+
+footer .btn-1:hover,
+footer .btn-1:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+footer .btn:hover,
+footer .btn:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+footer .btn-floating {
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+footer .btn-floating:hover {
+    background-color: #000;
+}
+
+footer .social-icon {
+    font-size: 2rem; /* Увеличиваем размер иконок */
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+
+
+footer .email-subscribe {
+    display: flex;
+    align-items: center;
+}
+
+ footer .email-subscribe .form-outline {
+    margin-bottom: 0;
+    margin-right: 10px; /* Отступ между полем ввода и кнопкой */
+}
+
+
+ footer .email-subscribe .btn {
+    white-space: nowrap; /* Предотвращаем перенос текста в кнопке */
+}
+
+/* Social icons */
+

@@ -1,0 +1,46 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+}
+
+h1  {
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Адаптивный размер шрифта */
+}
+
+h2  {
+color: #FFAF90;
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Адаптивный размер шрифта */
+}
+
+h3  {
+    font-size: clamp(0.9rem, 2vw, 2.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+p {
+    font-size: clamp(0.7rem, 2vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+a {
+    color: inherit; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+a:hover {
+color: #FFAF90;
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+    i.fas {
+        margin-right: 8px; /* Отступ справа для иконок */
+    }
+
+    .container p {
+        display: flex;
+        align-items: center;
+    }
+
+    .container p a {
+        margin-left: 5px;
+    }

@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/index_css.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/footer_css.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+    <div class="position-relative mt- pt-3">
+        <img class="banner" src="{% static 'deps/images/banner.jpg' %}" alt="Летние наборы">
+        <div class="position-absolute top-30 start-30 translate-middle">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="button" class="btn-bt" href="#">
+                Преобрести сейчас
+            </button>
+        </div>
+    </div>
+    <h1 class="mt- pt-3">Bloomify - с любовью к себе и природе </h1>
+    <h3 class="mt- pt-3">Позаботься о своей коже качественно и натурально с нами!</h3>
+    <div class="text-center text-lg-center">
+        <!-- Grid container -->
+        <div class="container p-5">
+            <!-- Grid row -->
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <img class="best" src="{% static 'deps/images/mineral.jpeg' %}" alt="Минеральная декоративная косметика">
+                    <p>Минеральная декоративная косметика</h4>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <img class="best" src="{% static 'deps/images/not testing.jpeg' %}" alt="Не тестируется на животных">
+                    <p>Не тестируется на животных</p>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <img class="best" src="{% static 'deps/images/natural.jpeg' %}" alt="Натуральные средства для ухода">
+                    <p>Натуральные средства для ухода</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Оформляй покупки с комфортом</h1>
+    <div class="text-center text-lg-center">
+        <!-- Grid container -->
+        <div class="container-1 p-5">
+            <!-- Grid row -->
+            <div class="row-1">
+                <div class="col-lg-3-1 col-md-12-1 mb-4 mb-md-0">
+                    <img class="shag" src="{% static 'deps/images/1.jpg' %}" alt="Шаг 1.Оформление заказа">
+                    <p>Собирайте любой заказ на ваш вкус</p>
+                </div>
+                <div class="col-lg-3-1 col-md-12-1 mb-4 mb-md-0">
+                    <img class="shag" src="{% static 'deps/images/2.jpg' %}" alt="Шаг 2.Сборка заказа">
+                    <p>Мы аккуратно упаковываем заказы по будням в течении 24 часов с приёма</p>
+                </div>
+                <div class="col-lg-3-1 col-md-12-1 mb-4 mb-md-0">
+                    <img class="shag" src="{% static 'deps/images/3.jpg' %}" alt="Шаг 3.Самовывоз">
+                    <p>Отправляем на всей территории РФ. Самовывоз из Владимира</p>
+                </div>
+                <div class="col-lg-3-1 col-md-12-1 mb-4 mb-md-0">
+                    <img class="shag" src="{% static 'deps/images/4.jpg' %}" alt="Шаг 4.Доставка">
+                    <p>Бесплатная доставка по России</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <!-- Grid container -->
+    <div class="container pt-3">
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0 text-start">
+                <h5 class="text-uppercase text-white">Bloomify</h5>
+                <h6 class="text-white">С любовью к себе и природе</h6><br>
+                <h7 class="text-white"><i class="fas fa-envelope"></i> <a href="mailto:blmf.off@gmail.com">blmf.off@gmail.com</a></h7><br>
+                <h7 class="text-white"><i class="fas fa-phone"></i> <a href="tel:+79672557994">+7(967)255-79-94</a></h7><br><br>
+                <h7 class="text-white"><i class="fas fa-home"></i><a href="https://www.google.com/maps/search/?api=1&query=Россия,+г.Владимир,+ул.Мира+д.30" target="_blank">Россия, г.Владимир, ул.Мира д.30</a></h7><br><br>
+
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-5 col-md-6 mb-4 mb-md-0 text-center">
+                <h6 class="pt-2 text-white text-center" >Чтобы получать новости быстрее всех, <br> оформи подписку</h6><br>
+                <!-- Email input -->
+                <div class="email-subscribe d-flex align-items-center justify-content-center">
+                    <div data-mdb-input-init class="form-outline mb-0">
+                        <input type="email" id="form5Example22" name="email" class="form-control" required />
+                        <label class="form-label"  for="form5Example22">Электронная почта</label>
+                    </div>
+                    <button id="subscribe-button" data-mdb-ripple-init type="submit" class="btn btn-primary-dark mb-4">Подписаться</button>
+                </div>
+                <!-- Social icons -->
+                <section class="mb-4">
+                    <!-- Telegram -->
+                    <a data-mdb-ripple-init class="btn-1 btn-outline btn-floating m-1" style="background-color: #888888" href="https://t.me/" role="button">
+                        <i class="fab fa-telegram text-white"></i>
+                    </a>
+                    <!-- VKontakte -->
+                    <a data-mdb-ripple-init class="btn-1 btn-outline btn-floating m-1" style="background-color: #888888" href="https://vk.com/" role="button">
+                        <i class="fab fa-vk text-white"></i>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a data-mdb-ripple-init class="btn-1 btn-outline btn-floating m-1" style="background-color: #888888" href="https://web.whatsapp.com/" role="button">
+                        <i class="fab fa-whatsapp text-white"></i>
+                    </a>
+                </section>
+            </div>
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- Grid container -->
+</footer>
+<script src="{% static "deps/js/index.js" %}"></script>
+{% endblock %}
+
+
+
+

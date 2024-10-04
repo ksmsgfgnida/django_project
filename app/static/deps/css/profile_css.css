@@ -1,0 +1,55 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт Montserrat для всего текста */
+}
+
+h1  {
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Адаптивный размер шрифта */
+}
+
+
+h2  {
+    font-size: clamp(0.5rem, 1vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+th  {
+    font-size: clamp(0.5rem, 1vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+td  {
+    font-size: clamp(0.5rem, 1vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Шрифт для параграфов */
+p {
+    text-align: center;
+    font-size: clamp(0.7rem, 2vw, 1.5rem); /* Адаптивный размер шрифта */
+}
+
+/* Social icons */
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-info {
+
+    align-items: center;
+}
+
+.edit-form {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.contener-1{
+padding-right: 0;
+     padding-left: 0;
+}

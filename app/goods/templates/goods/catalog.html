@@ -51,6 +51,21 @@
                     От дорогих к дешевым
                 </label>
             </div>
+
+            <div class="form-check text-white mx-3">
+                <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="name"
+                {% if request.GET.order_by == 'name' %}checked{% endif %}>
+                <label class="form-check-label" for="flexRadioDefault3">
+                    От А до Я
+                </label>
+            </div>
+            <div class="form-check text-white mx-3">
+                <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-name"
+                {% if request.GET.order_by == '-name' %}checked{% endif %}>
+                <label class="form-check-label" for="flexRadioDefault3">
+                    От Я до А
+                </label>
+            </div>
             <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
         </form>
     </div>

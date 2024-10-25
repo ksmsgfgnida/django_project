@@ -7,12 +7,10 @@ from goods.utils import q_search
 
 class CatalogView(ListView):
     model = Products
-    # queryset = Products.objects.all().order_by("-id")
     template_name = "goods/catalog.html"
     context_object_name = "goods"
     paginate_by = 6
     allow_empty = True
-    # чтоб удобно передать в методы
     slug_url_kwarg = "category_slug"
 
     def get_queryset(self):
@@ -22,21 +20,21 @@ class CatalogView(ListView):
         query = self.request.GET.get("q")
 
         if category_slug == "all":
-            goods = super().get_queryset()
+            goods = super().get_queryset().filter(quantity__gt=0)  # Только товары в наличии
         elif query:
             goods = q_search(query)
         else:
-            goods = super().get_queryset().filter(category__slug=category_slug)
-            if not goods.exists():
-                raise Http404()
+            goods = super().get_queryset().filter(category__slug=category_slug, quantity__gt=0)
+
+        if not goods.exists():
+            raise Http404()
 
         if on_sale:
             goods = goods.filter(discount__gt=0)
-
         if order_by and order_by != "default":
             goods = goods.order_by(order_by)
-
         return goods
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

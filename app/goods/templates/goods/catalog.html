@@ -29,6 +29,7 @@
                     Товары по акции
                 </label>
             </div>
+
             <p class="text-white mx-3 mt-3">Сортировать:</p>
             <div class="form-check text-white mx-3">
                 <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault1" value="default"
@@ -67,8 +68,19 @@
                 </label>
             </div>
             <button type="submit" class="btn btn-primary mx-3 mt-3">Применить</button>
+                <div class="form-check text-white mx-3">
+                <label class="text-white">Категории:</label>
+                {% tag_categories as categories %}
+                {% for category in categories %}
+                    <div>
+                        <a href="{% url "catalog:index" category.slug %}" class="text-white">{{ category.name }}</a>
+                    </div>
+                {% endfor %}
+            </div>
         </form>
+
     </div>
+
 
     {% if request.GET.q %}
     <h3 class="mt-4">Результаты поиска по запросу {{ request.GET.q }}</h3>

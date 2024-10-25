@@ -44,3 +44,9 @@ color: #FFAF90;
     .container p a {
         margin-left: 5px;
     }
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
